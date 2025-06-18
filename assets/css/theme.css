@@ -1,0 +1,99 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ :root {
+     --primary-color: #d4af37;
+     --secondary-color: #2c3e50;
+     --accent-color: #e74c3c;
+     --text-light: #ffffff;
+     --text-dark: #2c3e50;
+     --bg-light: #ffffff;
+     --bg-dark: #1a1a1a;
+     --shadow-light: rgba(0, 0, 0, 0.1);
+     --shadow-dark: rgba(255, 255, 255, 0.1);
+     --gradient-gold: linear-gradient(135deg, #d4af37, #f39c12);
+     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     --border-radius: 8px;
+ }
+
+ [data-theme="dark"] {
+     --text-color: var(--text-light);
+     --bg-color: var(--bg-dark);
+     --header-bg: rgba(26, 26, 26, 0.95);
+     --shadow: var(--shadow-dark);
+     --border-color: rgba(255, 255, 255, 0.1);
+ }
+
+ [data-theme="light"] {
+     --text-color: var(--text-dark);
+     --bg-color: var(--bg-light);
+     --header-bg: rgba(255, 255, 255, 0.95);
+     --shadow: var(--shadow-light);
+     --border-color: rgba(0, 0, 0, 0.1);
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: var(--bg-color);
+     color: var(--text-color);
+     transition: var(--transition);
+     overflow-x: hidden;
+ }
+
+ /* ========== THEME TOGGLE BUTTON ========== */
+ .theme-toggle {
+     position: fixed;
+     top: 15px;
+     background: var(--gradient-gold);
+     color: var(--text-dark);
+     border: none;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     font-size: 1.2rem;
+     cursor: pointer;
+     transition: var(--transition);
+     z-index: 1000;
+     box-shadow: 0 4px 15px var(--shadow);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .theme-toggle:hover {
+     transform: scale(1.1) rotate(180deg);
+     background: var(--primary-color);
+     color: white;
+ }
+
+ .theme-toggle i {
+     color: var(--text-dark);
+     font-size: 1.2rem;
+ }
+
+ @media (max-width: 768px) {
+     .theme-toggle {
+         right: 50px !important;
+     }
+ }
+
+ @media screen and (min-width: 769px) and (max-width: 1024px) {
+     .theme-toggle {
+         right: 23% !important;
+     }
+ }
+
+ @media screen and (min-width: 1150px) and (max-width: 1440px) {
+     .theme-toggle {
+         right: 26% !important;
+     }
+ }
+
+ @media (min-width: 1441px) {
+     .theme-toggle {
+         right: 28% !important;
+     }
+ }
