@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella Vista Restaurant</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
+     <!-- Bootstrap 5 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
 
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-</head>
 
+    
+</head>
 <body data-theme="light">
     <header class="header">
         <div class="header-container">
@@ -37,8 +35,8 @@
 
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="./index.html" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link active">Menu</a></li>
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
                     <li><a href="./about.html" class="nav-link">About</a></li>
                     <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
@@ -49,7 +47,7 @@
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="./booking.html" class="reservation-btn">
+                <a class="reservation-btn">
                     <i class="fas fa-calendar-check"></i>
                     Reserve Table
                 </a>
@@ -62,10 +60,10 @@
         <div class="mobile-menu" id="mobileMenu">
             <ul class="mobile-nav-links">
                 <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
-                <li><a href="#" class="mobile-nav-link">Menu</a></li>
+                <li><a href="./menu.html" class="mobile-nav-link">Menu</a></li>
                 <li><a href="./about.html" class="mobile-nav-link">About</a></li>
                 <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#" class="mobile-nav-link">Contact</a></li>
             </ul>
             <div class="mobile-actions">
                 <a href="./booking.html" class="reservation-btn">
@@ -85,10 +83,239 @@
         <div class="hero-content">
             <h1>Welcome to Bella Vista</h1>
             <p>Experience culinary excellence in an elegant atmosphere</p>
-            <a href="./booking.html" class="reservation-btn" style="font-size: 16px; padding: 15px 30px;">
-                <i class="fas fa-calendar-check"></i>
-                Make Reservation
-            </a>
+        </div>
+    </section>
+
+        <!-- Reservation Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="gallery-title">Reserve Your Table</h2>
+                    <p class="gallery-subtitle">
+                        Experience culinary excellence in our intimate dining room. Book your table for an unforgettable evening of fine dining and exceptional service.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Booking Form -->
+                <div class="col-lg-8">
+                    <div class="booking-card">
+                        <h3 class="mb-4 d-flex align-items-center">
+                            <i class="fas fa-calendar-alt me-2" style="color: var(--primary-color);"></i>
+                            Online Reservation
+                        </h3>
+                        
+                        <form id="reservationForm">
+                            <div class="row">
+                                <!-- Date Selection -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-calendar"></i>
+                                            Preferred Date
+                                        </label>
+                                        <input type="date" class="form-control" id="reservationDate" required>
+                                    </div>
+                                </div>
+
+                                <!-- Party Size -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-users"></i>
+                                            Party Size
+                                        </label>
+                                        <div class="party-size-options">
+                                            <div class="party-size-option" data-size="1">
+                                                <i class="fas fa-user party-size-icon"></i>
+                                                <div>1</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="2">
+                                                <i class="fas fa-user-friends party-size-icon"></i>
+                                                <div>2</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="3-4">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>3-4</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="5-6">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>5-6</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="7+">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>7+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Time Slots -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-clock"></i>
+                                    Available Time Slots
+                                </label>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-time="17:30">
+                                        5:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="18:00">
+                                        6:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="18:30">
+                                        6:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="19:00">
+                                        7:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                    <div class="time-slot unavailable" data-time="19:30">
+                                        7:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot unavailable"></span>
+                                            Booked
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="20:00">
+                                        8:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="20:30">
+                                        8:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="21:00">
+                                        9:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Guest Information -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-user"></i>
+                                            Full Name
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-phone"></i>
+                                            Phone Number
+                                        </label>
+                                        <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+
+                            <!-- Special Requests -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-star"></i>
+                                    Special Requests
+                                </label>
+                                <textarea class="form-control special-requests" placeholder="Any dietary restrictions, allergies, special occasions, or seating preferences? We'll do our best to accommodate your needs."></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-reserve">
+                                <i class="fas fa-check me-2"></i>
+                                Reserve Table
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="contact-title">Large Groups</h4>
+                        <p class="contact-info">
+                            Planning a special event or dining with 8+ guests?
+                        </p>
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fas fa-phone me-1"></i>
+                            Call: (123) 456-7890
+                        </a>
+                    </div>
+
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 class="contact-title">Private Events</h4>
+                        <p class="contact-info">
+                            Exclusive dining experiences for your special occasions.
+                        </p>
+                        <a href="mailto:events@restaurant.com" class="contact-link">
+                            <i class="fas fa-envelope me-1"></i>
+                            events@restaurant.com
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="contact-title">Dining Hours</h4>
+                        <div class="contact-info">
+                            <div class="mb-2">
+                                <strong>Dinner Service</strong><br>
+                                Tuesday - Sunday<br>
+                                5:30 PM - 10:00 PM
+                            </div>
+                            <div class="text-muted">
+                                <small>Closed Mondays</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -546,695 +773,287 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+     <!-- Restaurant Information Section -->
     <section class="gallery-section py-5">
         <div class="container">
             <!-- Section Header -->
-            <h2 class="gallery-title">What Our Guests Say</h2>
-            <p class="gallery-subtitle mb-5">
-                Discover why food enthusiasts and critics alike celebrate our culinary excellence through their authentic experiences and reviews.
-            </p>
-
-            <!-- Rating Display -->
-            <div class="rating-display fade-in">
-                <div class="rating-platforms">
-                    <div class="platform-rating">
-                        <i class="fab fa-google platform-logo google-logo"></i>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="rating-score">4.9</div>
-                        <div class="rating-count">1,247 reviews</div>
-                    </div>
-                    <div class="platform-rating">
-                        <i class="fab fa-yelp platform-logo yelp-logo"></i>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="rating-score">4.8</div>
-                        <div class="rating-count">892 reviews</div>
-                    </div>
-                    <div class="platform-rating">
-                        <i class="fab fa-tripadvisor platform-logo tripadvisor-logo"></i>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="rating-score">4.9</div>
-                        <div class="rating-count">634 reviews</div>
-                    </div>
-                </div>
+            <div class="fade-in">
+                <h2 class="gallery-title">Visit Our Restaurant</h2>
+                <p class="gallery-subtitle mb-5">
+                    Experience luxury dining in the heart of the city. Our elegant atmosphere and exceptional service await your arrival.
+                </p>
             </div>
 
-            <!-- Customer Reviews -->
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="review-card fade-in">
-                        <div class="review-header">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Michael Thompson" class="reviewer-photo">
-                            <div class="reviewer-info">
-                                <h5>Michael Thompson</h5>
-                                <div class="review-date">2 weeks ago</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "Absolutely exceptional dining experience! The wagyu beef was cooked to perfection, and the service was impeccable. Every dish was a work of art. This is fine dining at its absolute best."
-                        </p>
-                        <div class="review-platform">
-                            <span class="platform-badge">
-                                <i class="fab fa-google"></i>
-                                Google
-                            </span>
-                            <span class="verified-badge">
-                                <i class="fas fa-check-circle"></i>
-                                Verified
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="review-card fade-in">
-                        <div class="review-header">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b27c?w=150&h=150&fit=crop&crop=face" alt="Sarah Chen" class="reviewer-photo">
-                            <div class="reviewer-info">
-                                <h5>Sarah Chen</h5>
-                                <div class="review-date">1 month ago</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "Celebrated our anniversary here and it was magical! The ambiance is sophisticated yet warm, and the tasting menu was a journey through incredible flavors. The sommelier's wine pairings were spot-on."
-                        </p>
-                        <div class="review-platform">
-                            <span class="platform-badge">
-                                <i class="fab fa-yelp"></i>
-                                Yelp
-                            </span>
-                            <span class="verified-badge">
-                                <i class="fas fa-check-circle"></i>
-                                Verified
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="review-card fade-in">
-                        <div class="review-header">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="James Rodriguez" class="reviewer-photo">
-                            <div class="reviewer-info">
-                                <h5>James Rodriguez</h5>
-                                <div class="review-date">3 weeks ago</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "As a food blogger, I've dined at many high-end restaurants, but this place sets a new standard. The attention to detail is remarkable, from the plating to the service. A true culinary masterpiece!"
-                        </p>
-                        <div class="review-platform">
-                            <span class="platform-badge">
-                                <i class="fab fa-tripadvisor"></i>
-                                TripAdvisor
-                            </span>
-                            <span class="verified-badge">
-                                <i class="fas fa-check-circle"></i>
-                                Verified
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Food Critic Review -->
-            <div class="critic-reviews fade-in">
-                <div class="critic-review">
-                    <p class="critic-quote">
-                        A symphony of flavors that elevates the dining experience to an art form. The chef's innovative approach to classic techniques creates dishes that are both surprising and deeply satisfying. This restaurant deserves its place among the city's culinary elite.
-                    </p>
-                    <div class="critic-attribution">
-                        — Isabella Martinez, Food Critic
-                    </div>
-                    <div class="critic-publication">
-                        Gourmet & Wine Magazine
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media Mentions -->
-            <div class="social-mentions">
-                <h3 class="text-center mb-4" style="color: var(--text-color); font-family: 'Playfair Display', serif;">Social Media Buzz</h3>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="social-mention fade-in">
-                            <div class="social-header">
-                                <i class="fab fa-instagram social-platform instagram"></i>
-                                <span class="social-username">@foodieliving</span>
-                            </div>
-                            <p class="social-text">
-                                "Just had the most incredible dining experience! Every single course was perfection on a plate. The duck confit was to die for! 😍 #finedining #foodie"
-                            </p>
-                            <div class="social-engagement">
-                                <span><i class="fas fa-heart"></i> 1,247 likes</span>
-                                <span><i class="fas fa-comment"></i> 89 comments</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="social-mention fade-in">
-                            <div class="social-header">
-                                <i class="fab fa-twitter social-platform twitter"></i>
-                                <span class="social-username">@culinarycritic</span>
-                            </div>
-                            <p class="social-text">
-                                "Blown away by the innovation and execution at this restaurant. The chef's tasting menu is a masterclass in modern cuisine. Highly recommended! 🌟"
-                            </p>
-                            <div class="social-engagement">
-                                <span><i class="fas fa-retweet"></i> 342 retweets</span>
-                                <span><i class="fas fa-heart"></i> 891 likes</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="social-mention fade-in">
-                            <div class="social-header">
-                                <i class="fab fa-facebook social-platform facebook"></i>
-                                <span class="social-username">City Food Guide</span>
-                            </div>
-                            <p class="social-text">
-                                "Restaurant of the Year candidate right here! The attention to detail, the flavors, the presentation - everything is absolutely outstanding. Book your table now!"
-                            </p>
-                            <div class="social-engagement">
-                                <span><i class="fas fa-share"></i> 156 shares</span>
-                                <span><i class="fas fa-thumbs-up"></i> 423 likes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reservation Section -->
-    <section class="gallery-section py-5">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="gallery-title">Reserve Your Table</h2>
-                    <p class="gallery-subtitle">
-                        Experience culinary excellence in our intimate dining room. Book your table for an unforgettable evening of fine dining and exceptional service.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Booking Form -->
-                <div class="col-lg-8">
-                    <div class="booking-card">
-                        <h3 class="mb-4 d-flex align-items-center">
-                            <i class="fas fa-calendar-alt me-2" style="color: var(--primary-color);"></i>
-                            Online Reservation
-                        </h3>
-                        
-                        <form id="reservationForm">
-                            <div class="row">
-                                <!-- Date Selection -->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">
-                                            <i class="fas fa-calendar"></i>
-                                            Preferred Date
-                                        </label>
-                                        <input type="date" class="form-control" id="reservationDate" required>
-                                    </div>
-                                </div>
-
-                                <!-- Party Size -->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">
-                                            <i class="fas fa-users"></i>
-                                            Party Size
-                                        </label>
-                                        <div class="party-size-options">
-                                            <div class="party-size-option" data-size="1">
-                                                <i class="fas fa-user party-size-icon"></i>
-                                                <div>1</div>
-                                            </div>
-                                            <div class="party-size-option" data-size="2">
-                                                <i class="fas fa-user-friends party-size-icon"></i>
-                                                <div>2</div>
-                                            </div>
-                                            <div class="party-size-option" data-size="3-4">
-                                                <i class="fas fa-users party-size-icon"></i>
-                                                <div>3-4</div>
-                                            </div>
-                                            <div class="party-size-option" data-size="5-6">
-                                                <i class="fas fa-users party-size-icon"></i>
-                                                <div>5-6</div>
-                                            </div>
-                                            <div class="party-size-option" data-size="7+">
-                                                <i class="fas fa-users party-size-icon"></i>
-                                                <div>7+</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Time Slots -->
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-clock"></i>
-                                    Available Time Slots
-                                </label>
-                                <div class="time-slots">
-                                    <div class="time-slot" data-time="17:30">
-                                        5:30 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot"></span>
-                                            Available
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="18:00">
-                                        6:00 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot"></span>
-                                            Available
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="18:30">
-                                        6:30 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot limited"></span>
-                                            Limited
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="19:00">
-                                        7:00 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot limited"></span>
-                                            Limited
-                                        </span>
-                                    </div>
-                                    <div class="time-slot unavailable" data-time="19:30">
-                                        7:30 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot unavailable"></span>
-                                            Booked
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="20:00">
-                                        8:00 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot"></span>
-                                            Available
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="20:30">
-                                        8:30 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot"></span>
-                                            Available
-                                        </span>
-                                    </div>
-                                    <div class="time-slot" data-time="21:00">
-                                        9:00 PM
-                                        <span class="availability-indicator">
-                                            <span class="availability-dot limited"></span>
-                                            Limited
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Guest Information -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">
-                                            <i class="fas fa-user"></i>
-                                            Full Name
-                                        </label>
-                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">
-                                            <i class="fas fa-phone"></i>
-                                            Phone Number
-                                        </label>
-                                        <input type="tel" class="form-control" placeholder="Enter your phone number" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-envelope"></i>
-                                    Email Address
-                                </label>
-                                <input type="email" class="form-control" placeholder="Enter your email address" required>
-                            </div>
-
-                            <!-- Special Requests -->
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-star"></i>
-                                    Special Requests
-                                </label>
-                                <textarea class="form-control special-requests" placeholder="Any dietary restrictions, allergies, special occasions, or seating preferences? We'll do our best to accommodate your needs."></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="btn-reserve">
-                                <i class="fas fa-check me-2"></i>
-                                Reserve Table
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="col-lg-4">
-                    <div class="contact-card mb-4">
-                        <div class="contact-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4 class="contact-title">Large Groups</h4>
-                        <p class="contact-info">
-                            Planning a special event or dining with 8+ guests?
-                        </p>
-                        <a href="tel:+1234567890" class="contact-link">
-                            <i class="fas fa-phone me-1"></i>
-                            Call: (123) 456-7890
-                        </a>
-                    </div>
-
-                    <div class="contact-card mb-4">
-                        <div class="contact-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <h4 class="contact-title">Private Events</h4>
-                        <p class="contact-info">
-                            Exclusive dining experiences for your special occasions.
-                        </p>
-                        <a href="mailto:events@restaurant.com" class="contact-link">
-                            <i class="fas fa-envelope me-1"></i>
-                            events@restaurant.com
-                        </a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                <!-- Opening Hours -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h4 class="contact-title">Dining Hours</h4>
-                        <div class="contact-info">
-                            <div class="mb-2">
-                                <strong>Dinner Service</strong><br>
-                                Tuesday - Sunday<br>
-                                5:30 PM - 10:00 PM
-                            </div>
-                            <div class="text-muted">
-                                <small>Closed Mondays</small>
+                        <h4>Opening Hours</h4>
+                        <ul>
+                            <li><i class="fas fa-sun"></i><strong>Monday - Thursday:</strong> 11:00 AM - 10:00 PM</li>
+                            <li><i class="fas fa-moon"></i><strong>Friday - Saturday:</strong> 11:00 AM - 11:00 PM</li>
+                            <li><i class="fas fa-coffee"></i><strong>Sunday:</strong> 10:00 AM - 9:00 PM <span class="badge-luxury">Brunch Special</span></li>
+                            <li><i class="fas fa-cocktail"></i><strong>Happy Hour:</strong> 4:00 PM - 6:00 PM (Mon-Fri)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Information</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890" class="contact-link">
+                                    <strong>Phone:</strong> +1 (234) 567-8900
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:reservations@luxurydining.com" class="contact-link">
+                                    <strong>Email:</strong> reservations@luxurydining.com
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-calendar-alt"></i>
+                                <a href="#" class="contact-link">
+                                    <strong>Reservations:</strong> Book Online
+                                </a>
+                            </li>
+                            <li><i class="fas fa-users"></i><strong>Private Events:</strong> +1 (234) 567-8901</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Location & Map -->
+                <div class="col-lg-8 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Location</h4>
+                        <p class="mb-3">
+                            <strong>123 Gourmet Avenue, Downtown District<br>
+                            Metropolitan City, MC 12345</strong>
+                        </p>
+                        
+                        <!-- Embedded Map Placeholder -->
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                <p><strong>Interactive Map</strong></p>
+                                <p>Click here to view directions</p>
+                                <small>Located in the heart of downtown, easily accessible by public transport</small>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Parking & Transportation -->
+                <div class="col-lg-4 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Parking & Access</h4>
+                        <ul>
+                            <li><i class="fas fa-parking"></i><strong>Valet Parking:</strong> Available</li>
+                            <li><i class="fas fa-car-side"></i><strong>Self Parking:</strong> Adjacent garage</li>
+                            <li><i class="fas fa-subway"></i><strong>Metro:</strong> 2 blocks away</li>
+                            <li><i class="fas fa-taxi"></i><strong>Ride Share:</strong> Drop-off zone</li>
+                            <li><i class="fas fa-wheelchair"></i><strong>Accessibility:</strong> Fully accessible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dress Code & Policies -->
+                <div class="col-lg-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Dress Code & Policies</h4>
+                        <ul>
+                            <li><i class="fas fa-tshirt"></i><strong>Dress Code:</strong> Smart Casual <span class="badge-luxury">Upscale</span></li>
+                            <li><i class="fas fa-ban-smoking"></i><strong>Smoking:</strong> Designated outdoor area only</li>
+                            <li><i class="fas fa-paw"></i><strong>Pets:</strong> Service animals welcome</li>
+                            <li><i class="fas fa-child"></i><strong>Children:</strong> Welcome until 8:00 PM</li>
+                            <li><i class="fas fa-credit-card"></i><strong>Payment:</strong> All major cards accepted</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Special Services -->
+                <div class="col-lg-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4>Special Services</h4>
+                        <ul>
+                            <li><i class="fas fa-birthday-cake"></i><strong>Private Dining:</strong> Up to 20 guests</li>
+                            <li><i class="fas fa-glass-cheers"></i><strong>Wine Tastings:</strong> By appointment</li>
+                            <li><i class="fas fa-utensils"></i><strong>Chef's Table:</strong> Exclusive experience</li>
+                            <li><i class="fas fa-gift"></i><strong>Gift Cards:</strong> Available online & in-store</li>
+                            <li><i class="fas fa-calendar-check"></i><strong>Events:</strong> Corporate & private parties</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Media Integration Section -->
-    <section class="gallery-section py-5">
-        <div class="container">
+    <!-- Newsletter Signup Section -->
+    <section class="gallery-section py-5" id="newsletter">
+        <!-- Floating Background Elements -->
+        <div class="floating-elements">
+            <i class="fas fa-utensils floating-element" style="font-size: 2rem;"></i>
+            <i class="fas fa-wine-glass floating-element" style="font-size: 1.5rem;"></i>
+            <i class="fas fa-envelope floating-element" style="font-size: 1.8rem;"></i>
+            <i class="fas fa-star floating-element" style="font-size: 1.2rem;"></i>
+        </div>
+
+        <div class="container newsletter-container">
             <!-- Section Header -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="gallery-title">Connect With Us</h2>
-                    <p class="gallery-subtitle">Follow our culinary journey across social media</p>
-                </div>
+            <div class="gallery-header fade-in mb-0">
+                <h2 class="gallery-title">Stay Connected</h2>
+                <p class="gallery-subtitle mb-5">
+                    Join our exclusive newsletter and be the first to discover new culinary experiences, 
+                    special offers, and unforgettable dining events at our restaurant.
+                </p>
             </div>
 
-            <!-- Instagram Feed -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="social-card animate-on-scroll">
-                        <div class="social-card-header">
-                            <div class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <h3 class="social-card-title">Instagram Feed</h3>
-                        </div>
-                        <p class="mb-3">Discover our latest culinary creations and behind-the-scenes moments</p>
-                        
-                        <div class="instagram-grid">
-                            <div class="instagram-post">
-                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Delicious pasta dish">
-                                <div class="instagram-overlay">
-                                    <div class="instagram-stats">
-                                        <div><i class="fas fa-heart"></i> 2.4K</div>
-                                        <div><i class="fas fa-comment"></i> 89</div>
-                                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="newsletter-card">
+                        <!-- Benefits Grid -->
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tag"></i>
                                 </div>
+                                <h4 class="benefit-title">Special Offers</h4>
+                                <p class="benefit-description">
+                                    Exclusive discounts and promotional deals available only to our newsletter subscribers.
+                                </p>
                             </div>
-                            <div class="instagram-post">
-                                <img src="https://unsplash.com/photos/close-up-photo-of-pizza-with-cheese-D3Mag4BKqns" alt="Gourmet pizza">
-                                <div class="instagram-overlay">
-                                    <div class="instagram-stats">
-                                        <div><i class="fas fa-heart"></i> 1.8K</div>
-                                        <div><i class="fas fa-comment"></i> 52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="instagram-post">
-                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" alt="Fine dining experience">
-                                <div class="instagram-overlay">
-                                    <div class="instagram-stats">
-                                        <div><i class="fas fa-heart"></i> 3.1K</div>
-                                        <div><i class="fas fa-comment"></i> 127</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="instagram-post d-none d-md-block">
-                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop" alt="Restaurant ambiance">
-                                <div class="instagram-overlay">
-                                    <div class="instagram-stats">
-                                        <div><i class="fas fa-heart"></i> 956</div>
-                                        <div><i class="fas fa-comment"></i> 34</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Facebook Reviews -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="social-card animate-on-scroll">
-                        <div class="social-card-header">
-                            <div class="social-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <h3 class="social-card-title">Customer Reviews</h3>
-                        </div>
-                        <p class="mb-3">What our valued guests are saying about their dining experience</p>
-                        
-                        <div class="row d-flex justify-content-evenly">
-                            <div class="col-md-4">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <img src="https://i.pravatar.cc/100?img=32" alt="Customer" class="reviewer-avatar">
-                                        <div class="reviewer-info">
-                                            <h6>Sarah Johnson</h6>
-                                            <div class="review-rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">"Absolutely exceptional dining experience! The atmosphere is elegant and the food is simply divine. Every dish was perfectly crafted and beautifully presented."</p>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-utensils"></i>
                                 </div>
+                                <h4 class="benefit-title">New Menu Items</h4>
+                                <p class="benefit-description">
+                                    Be the first to know about our chef's latest creations and seasonal menu updates.
+                                </p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Customer" class="reviewer-avatar">
-                                        <div class="reviewer-info">
-                                            <h6>Michael Chen</h6>
-                                            <div class="review-rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">"Outstanding service and incredible flavors. The chef's attention to detail is remarkable. This has become our go-to restaurant for special occasions."</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <img src="https://i.pravatar.cc/100?img=44" alt="Customer" class="reviewer-avatar">
-                                        <div class="reviewer-info">
-                                            <h6>Sarah Johnson</h6>
-                                            <div class="review-rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">"Absolutely exceptional dining experience! The atmosphere is elegant and the food is simply divine. Every dish was perfectly crafted and beautifully presented."</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Social Media Links -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="social-card animate-on-scroll">
-                        <div class="social-card-header">
-                            <div class="social-icon">
-                                <i class="fas fa-share-alt"></i>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4 class="benefit-title">Event Notifications</h4>
+                                <p class="benefit-description">
+                                    Get early access to wine tastings, chef's table experiences, and special dining events.
+                                </p>
                             </div>
-                            <h3 class="social-card-title">Follow Us</h3>
                         </div>
-                        <p class="text-center mb-3">Stay connected with our latest updates and exclusive offers</p>
-                        
-                        <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Like us on Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Connect on LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Subscribe to our YouTube channel">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Follow us on TikTok">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- User Generated Content -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="social-card animate-on-scroll">
-                        <div class="social-card-header">
-                            <div class="social-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3 class="social-card-title">Guest Highlights</h3>
-                        </div>
-                        <p class="mb-3">See how our guests are enjoying their culinary journey with us</p>
-                        
-                        <div class="ugc-grid">
-                            <div class="ugc-post">
-                                <span class="featured-badge">Featured</span>
-                                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop" alt="User generated content" class="ugc-image">
-                                <div class="ugc-content">
-                                    <div class="ugc-user">
-                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="User" class="ugc-avatar">
-                                        <h6 class="ugc-username">@foodielover23</h6>
+                        <!-- Newsletter Form -->
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">
+                                            <i class="fas fa-user checkbox-icon"></i> First Name
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            class="form-control" 
+                                            placeholder="Enter your first name"
+                                            required
+                                        >
                                     </div>
-                                    <p class="ugc-caption">Perfect date night spot! The ambiance and food quality exceeded all expectations. 🍽️✨ #finedining</p>
-                                    <div class="ugc-engagement">
-                                        <span><i class="fas fa-heart"></i> 342</span>
-                                        <span><i class="fas fa-comment"></i> 28</span>
-                                        <span><i class="fas fa-share"></i> 15</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">
+                                            <i class="fas fa-user checkbox-icon"></i> Last Name
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            class="form-control" 
+                                            placeholder="Enter your last name"
+                                            required
+                                        >
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="ugc-post">
-                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="User generated content" class="ugc-image">
-                                <div class="ugc-content">
-                                    <div class="ugc-user">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="User" class="ugc-avatar">
-                                        <h6 class="ugc-username">@chefwannabe</h6>
-                                    </div>
-                                    <p class="ugc-caption">Incredible presentation and flavors! The chef's creativity really shines through every dish. Highly recommended! 👨‍🍳</p>
-                                    <div class="ugc-engagement">
-                                        <span><i class="fas fa-heart"></i> 189</span>
-                                        <span><i class="fas fa-comment"></i> 12</span>
-                                        <span><i class="fas fa-share"></i> 8</span>
-                                    </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope checkbox-icon"></i> Email Address
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-control" 
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-bell checkbox-icon"></i> What would you like to receive?
+                                </label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="offers" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-percentage checkbox-icon"></i>
+                                            Email subscription for special offers
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="menu" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-utensils checkbox-icon"></i>
+                                            New menu announcements
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="events" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-calendar-check checkbox-icon"></i>
+                                            Event notifications
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
-                            
-                            <div class="ugc-post d-none d-lg-block">
-                                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop" alt="User generated content" class="ugc-image">
-                                <div class="ugc-content">
-                                    <div class="ugc-user">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="User" class="ugc-avatar">
-                                        <h6 class="ugc-username">@gourmetguy</h6>
-                                    </div>
-                                    <p class="ugc-caption">Business dinner perfection! Professional atmosphere with world-class cuisine. Our clients were thoroughly impressed. 🥂</p>
-                                    <div class="ugc-engagement">
-                                        <span><i class="fas fa-heart"></i> 267</span>
-                                        <span><i class="fas fa-comment"></i> 19</span>
-                                        <span><i class="fas fa-share"></i> 22</span>
-                                    </div>
-                                </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                                Subscribe Now
+                            </button>
+
+                            <div class="success-message" id="successMessage">
+                                <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
+                                Thank you for subscribing! Welcome to our culinary community.
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1281,8 +1100,8 @@
                             <ul class="footer-links">
                                 <li><a href="./index.html"><i class="fas fa-home"></i>Home</a></li>
                                 <li><a href="./about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
-                                <li><a href="#"><i class="fas fa-book-open"></i>Menu</a></li>
-                                <li><a href="./booking.html"><i class="fas fa-calendar-alt"></i>Reservations</a></li>
+                                <li><a href="./menu.html"><i class="fas fa-book-open"></i>Menu</a></li>
+                                <li><a href="#"><i class="fas fa-calendar-alt"></i>Reservations</a></li>
                                 <li><a href="./events.html"><i class="fas fa-glass-cheers"></i>Events</a></li>
                                 <li><a href="./contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
                             </ul>
@@ -1391,5 +1210,4 @@
     <script src="assets/js/index.js"></script>
     <script src="assets/js/menu.js"></script>
 </body>
-
 </html>
