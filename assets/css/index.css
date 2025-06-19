@@ -143,6 +143,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 25%;
+    justify-content: space-between;
 }
 
 .mobile-actions {
@@ -176,7 +178,7 @@
 }
 
 /* ========== BUTTONS ========== */
-.reservation-btn, .order-btn, .view-menu-btn, .btn-reserve, .feature-btn, .event-btn, .btn-newsletter, .submit-btn {
+.reservation-btn, .order-btn, .view-menu-btn, .btn-reserve, .feature-btn, .event-btn, .btn-newsletter, .submit-btn, .submit-order-btn {
     background: var(--gradient-gold);
     color: var(--text-dark);
     border: none;
@@ -193,11 +195,11 @@
     gap: 8px;
 }
 
-.reservation-btn, .order-btn, .btn-reserve, .btn-newsletter, .submit-btn {
+.reservation-btn, .order-btn, .btn-reserve, .btn-newsletter, .submit-btn, .submit-order-btn {
     padding: 12px 25px;
 }
 
-.reservation-btn:hover, .order-btn:hover, .btn-reserve:hover, .btn-newsletter:hover, .submit-btn:hover {
+.reservation-btn:hover, .submit-order-btn:hover, .btn-reserve:hover, .btn-newsletter:hover, .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
     background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
