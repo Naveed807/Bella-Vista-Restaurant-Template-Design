@@ -39,9 +39,9 @@
                 <ul class="nav-links">
                     <li><a href="./index.html" class="nav-link">Home</a></li>
                     <li><a href="#" class="nav-link active">Menu</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="./about.html" class="nav-link">About</a></li>
+                    <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
@@ -49,29 +49,34 @@
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="reservation-btn">
+                <a href="./booking.html" class="reservation-btn">
                     <i class="fas fa-calendar-check"></i>
                     Reserve Table
-                </button>
+                </a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
+                <div class="cart-summary" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="cart-count" id="cartCount">0</div>
+                </div>
+            
         </div>
 
         <div class="mobile-menu" id="mobileMenu">
             <ul class="mobile-nav-links">
-                <li><a href="#home" class="mobile-nav-link">Home</a></li>
-                <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
-                <li><a href="#about" class="mobile-nav-link">About</a></li>
-                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="#" class="mobile-nav-link">Menu</a></li>
+                <li><a href="./about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             </ul>
             <div class="mobile-actions">
-                <button class="reservation-btn">
+                <a href="./booking.html" class="reservation-btn">
                     <i class="fas fa-calendar-check"></i>
                     Reserve Table
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -81,14 +86,152 @@
         <i class="fas fa-utensils go-to-top-icon restaurant-icon"></i>
     </button>
 
+    <!-- Enhanced Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Order</h3>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p>Add some delicious items to get started!</p>
+            </div>
+
+        </div>
+
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$34.97</span>
+            </div>
+            <div class="total-row">
+                <span>Tax (8.5%):</span>
+                <span id="tax">$2.97</span>
+            </div>
+            <div class="total-row">
+                <span>Delivery Fee:</span>
+                <span id="deliveryFee">$3.99</span>
+            </div>
+            <div class="total-row total-final">
+                <span>Total:</span>
+                <span id="finalTotal">$41.93</span>
+            </div>
+            <button class="submit-btn d-inline" onclick="showCheckout()">
+                <i class="fas fa-credit-card"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Enhanced Overlay -->
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+    <!-- Enhanced Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Checkout</h3>
+                <button class="close-modal" onclick="closeModal()" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- onsubmit="submitOrder(event)" -->
+            <form id="checkoutForm" >
+                <div class="form-group">
+                    <label for="customerName">
+                        <i class="fas fa-user"></i> Full Name *
+                    </label>
+                    <input type="text" id="customerName" name="customerName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerEmail">
+                            <i class="fas fa-envelope"></i> Email *
+                        </label>
+                        <input type="email" id="customerEmail" name="customerEmail" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">
+                            <i class="fas fa-phone"></i> Phone *
+                        </label>
+                        <input type="tel" id="customerPhone" name="customerPhone" required placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryAddress">
+                        <i class="fas fa-map-marker-alt"></i> Delivery Address *
+                    </label>
+                    <textarea id="deliveryAddress" name="deliveryAddress" rows="3" required placeholder="Street address, city, state, ZIP code"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="orderType">
+                            <i class="fas fa-truck"></i> Order Type *
+                        </label>
+                        <select id="orderType" name="orderType" required>
+                            <option value="delivery">🚚 Delivery</option>
+                            <option value="pickup">🏪Pickup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">
+                            <i class="fas fa-credit-card"></i> Payment Method *
+                        </label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="card">💳 Credit/Debit Card</option>
+                            <option value="cash">💵 Cash on Delivery</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialInstructions">
+                        <i class="fas fa-sticky-note"></i> Special Instructions
+                    </label>
+                    <textarea id="specialInstructions" name="specialInstructions" rows="2" placeholder="Any special requests, dietary requirements, or delivery instructions..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-order-btn d-inline">
+                    <i class="fas fa-check-circle"></i> Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enhanced Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for your order. We'll start preparing it right away.</p>
+                <div class="order-number" id="orderNumber">Order #ORD-2024-001234</div>
+                <p>You'll receive updates via email and SMS.</p>
+                <p><strong>Estimated delivery time: 25-35 minutes</strong></p>
+                <button class="submit-order-btn d-inline" onclick="closeSuccessModal()" style="margin-top: 25px;">
+                    <i class="fas fa-home"></i> Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
     <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to Bella Vista</h1>
             <p>Experience culinary excellence in an elegant atmosphere</p>
-            <button class="reservation-btn" style="font-size: 16px; padding: 15px 30px;">
+            <a href="./booking.html" class="reservation-btn" style="font-size: 16px; padding: 15px 30px;">
                 <i class="fas fa-calendar-check"></i>
                 Make Reservation
-            </button>
+            </a>
         </div>
     </section>
 
@@ -1280,11 +1423,11 @@
                             <h5>Quick Links</h5>
                             <ul class="footer-links">
                                 <li><a href="./index.html"><i class="fas fa-home"></i>Home</a></li>
-                                <li><a href="#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                                <li><a href="./about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
                                 <li><a href="#"><i class="fas fa-book-open"></i>Menu</a></li>
-                                <li><a href="#reservations"><i class="fas fa-calendar-alt"></i>Reservations</a></li>
-                                <li><a href="#events"><i class="fas fa-glass-cheers"></i>Events</a></li>
-                                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+                                <li><a href="./booking.html"><i class="fas fa-calendar-alt"></i>Reservations</a></li>
+                                <li><a href="./events.html"><i class="fas fa-glass-cheers"></i>Events</a></li>
+                                <li><a href="./contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>

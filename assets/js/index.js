@@ -367,7 +367,7 @@ class ReservationManager {
     this.initPartySizeSelection();
     this.initTimeSlotSelection();
     this.initFormSubmission();
-    this.initReservationButtons();
+    // this.initReservationButtons();
     this.initScrollAnimations();
   }
 
@@ -406,13 +406,13 @@ class ReservationManager {
     });
   }
 
-  initReservationButtons() {
-    document.querySelectorAll(".reservation-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        alert("Redirecting to reservation system...");
-      });
-    });
-  }
+  // initReservationButtons() {
+  //   document.querySelectorAll(".reservation-btn").forEach((btn) => {
+  //     btn.addEventListener("click", () => {
+  //       alert("Redirecting to reservation system...");
+  //     });
+  //   });
+  // }
 
   handleFormSubmission() {
     const selectedDate = this.dateInput.value;

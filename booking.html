@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista Restaurant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+
+    
+</head>
+<body data-theme="light">
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">Bella Vista</div>
+                    <div class="logo-subtitle">Fine Dining</div>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="./about.html" class="nav-link">About</a></li>
+                    <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a class="reservation-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    Reserve Table
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="./menu.html" class="mobile-nav-link">Menu</a></li>
+                <li><a href="./about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="#" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <a href="./booking.html" class="reservation-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    Reserve Table
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Go to Top Button -->
+    <button id="goToTopBtn" class="go-to-top-btn" aria-label="Go back to top of page" title="Back to Top - Bon Appétit!">
+        <i class="fas fa-utensils go-to-top-icon restaurant-icon"></i>
+    </button>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Bella Vista</h1>
+            <p>Experience culinary excellence in an elegant atmosphere</p>
+        </div>
+    </section>
+
+        <!-- Reservation Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="gallery-title">Reserve Your Table</h2>
+                    <p class="gallery-subtitle">
+                        Experience culinary excellence in our intimate dining room. Book your table for an unforgettable evening of fine dining and exceptional service.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Booking Form -->
+                <div class="col-lg-8">
+                    <div class="booking-card">
+                        <h3 class="mb-4 d-flex align-items-center">
+                            <i class="fas fa-calendar-alt me-2" style="color: var(--primary-color);"></i>
+                            Online Reservation
+                        </h3>
+                        
+                        <form id="reservationForm">
+                            <div class="row">
+                                <!-- Date Selection -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-calendar"></i>
+                                            Preferred Date
+                                        </label>
+                                        <input type="date" class="form-control" id="reservationDate" required>
+                                    </div>
+                                </div>
+
+                                <!-- Party Size -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-users"></i>
+                                            Party Size
+                                        </label>
+                                        <div class="party-size-options">
+                                            <div class="party-size-option" data-size="1">
+                                                <i class="fas fa-user party-size-icon"></i>
+                                                <div>1</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="2">
+                                                <i class="fas fa-user-friends party-size-icon"></i>
+                                                <div>2</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="3-4">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>3-4</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="5-6">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>5-6</div>
+                                            </div>
+                                            <div class="party-size-option" data-size="7+">
+                                                <i class="fas fa-users party-size-icon"></i>
+                                                <div>7+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Time Slots -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-clock"></i>
+                                    Available Time Slots
+                                </label>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-time="17:30">
+                                        5:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="18:00">
+                                        6:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="18:30">
+                                        6:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="19:00">
+                                        7:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                    <div class="time-slot unavailable" data-time="19:30">
+                                        7:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot unavailable"></span>
+                                            Booked
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="20:00">
+                                        8:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="20:30">
+                                        8:30 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot"></span>
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="time-slot" data-time="21:00">
+                                        9:00 PM
+                                        <span class="availability-indicator">
+                                            <span class="availability-dot limited"></span>
+                                            Limited
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Guest Information -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-user"></i>
+                                            Full Name
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-phone"></i>
+                                            Phone Number
+                                        </label>
+                                        <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+
+                            <!-- Special Requests -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-star"></i>
+                                    Special Requests
+                                </label>
+                                <textarea class="form-control special-requests" placeholder="Any dietary restrictions, allergies, special occasions, or seating preferences? We'll do our best to accommodate your needs."></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-reserve">
+                                <i class="fas fa-check me-2"></i>
+                                Reserve Table
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="contact-title">Large Groups</h4>
+                        <p class="contact-info">
+                            Planning a special event or dining with 8+ guests?
+                        </p>
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fas fa-phone me-1"></i>
+                            Call: (123) 456-7890
+                        </a>
+                    </div>
+
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 class="contact-title">Private Events</h4>
+                        <p class="contact-info">
+                            Exclusive dining experiences for your special occasions.
+                        </p>
+                        <a href="mailto:events@restaurant.com" class="contact-link">
+                            <i class="fas fa-envelope me-1"></i>
+                            events@restaurant.com
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="contact-title">Dining Hours</h4>
+                        <div class="contact-info">
+                            <div class="mb-2">
+                                <strong>Dinner Service</strong><br>
+                                Tuesday - Sunday<br>
+                                5:30 PM - 10:00 PM
+                            </div>
+                            <div class="text-muted">
+                                <small>Closed Mondays</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Section Header with gold underline accent -->
+            <div class="gallery-header fade-in mb-0">
+                <h2 class="gallery-title">Featured Menu</h2>
+                <p class="gallery-subtitle">
+                    Discover our chef's masterfully crafted signature dishes, each prepared with the finest ingredients and culinary expertise
+                </p>
+            </div>
+
+            <!-- Menu Items using Bootstrap Grid -->
+            <!-- Tab Navigation -->
+            <div class="menu-tabs mt-5">
+                <button class="tab-btn active" data-tab="appetizers">
+                    <i class="fas fa-utensils"></i>Appetizers
+                </button>
+                <button class="tab-btn" data-tab="mains">
+                    <i class="fas fa-drumstick-bite"></i>Main Courses
+                </button>
+                <button class="tab-btn" data-tab="seafood">
+                    <i class="fas fa-fish"></i>Seafood
+                </button>
+                <button class="tab-btn" data-tab="desserts">
+                    <i class="fas fa-ice-cream"></i>Desserts
+                </button>
+            </div>
+
+            <!-- Appetizers Tab -->
+            <div id="appetizers" class="tab-content active">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-grid">
+                            <!-- Appetizer 1 -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-7">
+                                    <div class="chef-pick-badge">Chef's Pick</div>
+                                    <div class="price-badge">$18</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Truffle Arancini</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Crispy risotto balls with truffle oil
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Golden crispy risotto balls filled with mushroom and truffle, served with garlic aioli and fresh herbs
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>15 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.7)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge vegan">V</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Appetizer 2 -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-8">
+                                    <div class="price-badge">$22</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Burrata Caprese</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Fresh burrata with heirloom tomatoes
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Creamy burrata cheese with heirloom tomatoes, fresh basil, and aged balsamic reduction on grilled sourdough
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>10 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(4.6)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge vegan">V</div>
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses Tab -->
+            <div id="mains" class="tab-content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-grid">
+                            <!-- Wagyu Beef -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-3">
+                                    <div class="chef-pick-badge">Chef's Pick</div>
+                                    <div class="price-badge">$75</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Wagyu Beef Tenderloin</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Premium Wagyu beef with red wine reduction
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Premium Wagyu beef tenderloin, perfectly seared and served with garlic mashed potatoes and red wine reduction
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>30 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(5.0)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Duck Confit -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-5">
+                                    <div class="price-badge">$42</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Spicy Duck Confit</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        French duck leg with cherry gastrique
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Traditional French duck leg slowly cooked in its own fat, served with spicy cherry gastrique and roasted potatoes
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>28 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(4.7)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge spicy">🌶️</div>
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Truffle Risotto -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-2">
+                                    <div class="price-badge">$38</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Black Truffle Risotto</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Creamy Arborio rice with black truffle shavings
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Creamy Arborio rice slow-cooked with wild mushrooms, finished with black truffle shavings and aged Parmesan
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>25 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.8)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge vegan">V</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seafood Tab -->
+            <div id="seafood" class="tab-content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-grid">
+                            <!-- Grilled Salmon -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-1">
+                                    <div class="chef-pick-badge">Chef's Pick</div>
+                                    <div class="price-badge">$32</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Grilled Atlantic Salmon</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Fresh Atlantic salmon with lemon herb butter
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Fresh Atlantic salmon grilled to perfection, served with roasted seasonal vegetables and our signature lemon herb butter sauce
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>20 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.9)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Lobster Thermidor -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-4">
+                                    <div class="price-badge">$55</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Lobster Thermidor</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Maine lobster in rich cream sauce with cognac
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Fresh Maine lobster in rich cream sauce with cognac, herbs, and cheese, baked to golden perfection
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>35 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.9)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Pan-Seared Scallops -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-9">
+                                    <div class="chef-pick-badge">Chef's Pick</div>
+                                    <div class="price-badge">$45</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Pan-Seared Scallops</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Diver scallops with cauliflower purée
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Fresh diver scallops pan-seared to perfection, served with cauliflower purée and crispy pancetta
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>18 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.8)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge gluten-free">GF</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Tab -->
+            <div id="desserts" class="tab-content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-grid">
+                            <!-- Chocolate Soufflé -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-6">
+                                    <div class="chef-pick-badge">Chef's Pick</div>
+                                    <div class="price-badge">$22</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Belgian Chocolate Soufflé</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Light chocolate soufflé with vanilla ice cream
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Light and airy chocolate soufflé made with Belgian dark chocolate, served with vanilla bean ice cream
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>40 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4.8)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge vegan">V</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Tiramisu -->
+                            <article class="menu-item">
+                                <div class="menu-item-image dish-10">
+                                    <div class="price-badge">$16</div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3 class="menu-item-title">Classic Tiramisu</h3>
+                                    <p class="menu-item-description menu-item-description-short">
+                                        Traditional Italian tiramisu with espresso
+                                    </p>
+                                    <p class="menu-item-description menu-item-description-full">
+                                        Traditional Italian tiramisu with layers of espresso-soaked ladyfingers, mascarpone cream, and cocoa powder
+                                    </p>
+                                    <div class="menu-item-details">
+                                        <div class="menu-item-meta">
+                                            <div class="prep-time">
+                                                <i class="fas fa-clock"></i>
+                                                <span>5 min</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(4.6)</span>
+                                            </div>
+                                        </div>
+                                        <div class="dietary-badges">
+                                            <div class="dietary-badge vegan">V</div>
+                                        </div>
+                                    </div>
+                                    <button class="order-btn">
+                                        <i class="fas fa-shopping-cart"></i>Order Now
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- Restaurant Information Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="fade-in">
+                <h2 class="gallery-title">Visit Our Restaurant</h2>
+                <p class="gallery-subtitle mb-5">
+                    Experience luxury dining in the heart of the city. Our elegant atmosphere and exceptional service await your arrival.
+                </p>
+            </div>
+
+            <div class="row">
+                <!-- Opening Hours -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Opening Hours</h4>
+                        <ul>
+                            <li><i class="fas fa-sun"></i><strong>Monday - Thursday:</strong> 11:00 AM - 10:00 PM</li>
+                            <li><i class="fas fa-moon"></i><strong>Friday - Saturday:</strong> 11:00 AM - 11:00 PM</li>
+                            <li><i class="fas fa-coffee"></i><strong>Sunday:</strong> 10:00 AM - 9:00 PM <span class="badge-luxury">Brunch Special</span></li>
+                            <li><i class="fas fa-cocktail"></i><strong>Happy Hour:</strong> 4:00 PM - 6:00 PM (Mon-Fri)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Contact Information</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890" class="contact-link">
+                                    <strong>Phone:</strong> +1 (234) 567-8900
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:reservations@luxurydining.com" class="contact-link">
+                                    <strong>Email:</strong> reservations@luxurydining.com
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-calendar-alt"></i>
+                                <a href="#" class="contact-link">
+                                    <strong>Reservations:</strong> Book Online
+                                </a>
+                            </li>
+                            <li><i class="fas fa-users"></i><strong>Private Events:</strong> +1 (234) 567-8901</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Location & Map -->
+                <div class="col-lg-8 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Our Location</h4>
+                        <p class="mb-3">
+                            <strong>123 Gourmet Avenue, Downtown District<br>
+                            Metropolitan City, MC 12345</strong>
+                        </p>
+                        
+                        <!-- Embedded Map Placeholder -->
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                <p><strong>Interactive Map</strong></p>
+                                <p>Click here to view directions</p>
+                                <small>Located in the heart of downtown, easily accessible by public transport</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parking & Transportation -->
+                <div class="col-lg-4 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Parking & Access</h4>
+                        <ul>
+                            <li><i class="fas fa-parking"></i><strong>Valet Parking:</strong> Available</li>
+                            <li><i class="fas fa-car-side"></i><strong>Self Parking:</strong> Adjacent garage</li>
+                            <li><i class="fas fa-subway"></i><strong>Metro:</strong> 2 blocks away</li>
+                            <li><i class="fas fa-taxi"></i><strong>Ride Share:</strong> Drop-off zone</li>
+                            <li><i class="fas fa-wheelchair"></i><strong>Accessibility:</strong> Fully accessible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dress Code & Policies -->
+                <div class="col-lg-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Dress Code & Policies</h4>
+                        <ul>
+                            <li><i class="fas fa-tshirt"></i><strong>Dress Code:</strong> Smart Casual <span class="badge-luxury">Upscale</span></li>
+                            <li><i class="fas fa-ban-smoking"></i><strong>Smoking:</strong> Designated outdoor area only</li>
+                            <li><i class="fas fa-paw"></i><strong>Pets:</strong> Service animals welcome</li>
+                            <li><i class="fas fa-child"></i><strong>Children:</strong> Welcome until 8:00 PM</li>
+                            <li><i class="fas fa-credit-card"></i><strong>Payment:</strong> All major cards accepted</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Special Services -->
+                <div class="col-lg-6 mb-4">
+                    <div class="info-card fade-in">
+                        <div class="info-card-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4>Special Services</h4>
+                        <ul>
+                            <li><i class="fas fa-birthday-cake"></i><strong>Private Dining:</strong> Up to 20 guests</li>
+                            <li><i class="fas fa-glass-cheers"></i><strong>Wine Tastings:</strong> By appointment</li>
+                            <li><i class="fas fa-utensils"></i><strong>Chef's Table:</strong> Exclusive experience</li>
+                            <li><i class="fas fa-gift"></i><strong>Gift Cards:</strong> Available online & in-store</li>
+                            <li><i class="fas fa-calendar-check"></i><strong>Events:</strong> Corporate & private parties</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="gallery-section py-5" id="newsletter">
+        <!-- Floating Background Elements -->
+        <div class="floating-elements">
+            <i class="fas fa-utensils floating-element" style="font-size: 2rem;"></i>
+            <i class="fas fa-wine-glass floating-element" style="font-size: 1.5rem;"></i>
+            <i class="fas fa-envelope floating-element" style="font-size: 1.8rem;"></i>
+            <i class="fas fa-star floating-element" style="font-size: 1.2rem;"></i>
+        </div>
+
+        <div class="container newsletter-container">
+            <!-- Section Header -->
+            <div class="gallery-header fade-in mb-0">
+                <h2 class="gallery-title">Stay Connected</h2>
+                <p class="gallery-subtitle mb-5">
+                    Join our exclusive newsletter and be the first to discover new culinary experiences, 
+                    special offers, and unforgettable dining events at our restaurant.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="newsletter-card">
+                        <!-- Benefits Grid -->
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <h4 class="benefit-title">Special Offers</h4>
+                                <p class="benefit-description">
+                                    Exclusive discounts and promotional deals available only to our newsletter subscribers.
+                                </p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h4 class="benefit-title">New Menu Items</h4>
+                                <p class="benefit-description">
+                                    Be the first to know about our chef's latest creations and seasonal menu updates.
+                                </p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4 class="benefit-title">Event Notifications</h4>
+                                <p class="benefit-description">
+                                    Get early access to wine tastings, chef's table experiences, and special dining events.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Form -->
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">
+                                            <i class="fas fa-user checkbox-icon"></i> First Name
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            class="form-control" 
+                                            placeholder="Enter your first name"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">
+                                            <i class="fas fa-user checkbox-icon"></i> Last Name
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            class="form-control" 
+                                            placeholder="Enter your last name"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope checkbox-icon"></i> Email Address
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-control" 
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-bell checkbox-icon"></i> What would you like to receive?
+                                </label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="offers" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-percentage checkbox-icon"></i>
+                                            Email subscription for special offers
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="menu" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-utensils checkbox-icon"></i>
+                                            New menu announcements
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferences" value="events" checked>
+                                        <span class="checkbox-label">
+                                            <i class="fas fa-calendar-check checkbox-icon"></i>
+                                            Event notifications
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                                Subscribe Now
+                            </button>
+
+                            <div class="success-message" id="successMessage">
+                                <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
+                                Thank you for subscribing! Welcome to our culinary community.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row g-4 d-flex justify-content-evenly">
+                    <!-- Restaurant Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section">
+                            <h5><i class="fas fa-utensils me-2"></i>Bella Vista</h5>
+                            <p class="mb-4">Experience culinary excellence in an atmosphere of refined elegance. Where every dish tells a story of passion and perfection.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Like us on Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Connect on LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Subscribe to our YouTube channel">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Follow us on TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5>Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+                                <li><a href="./about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+                                <li><a href="./menu.html"><i class="fas fa-book-open"></i>Menu</a></li>
+                                <li><a href="#"><i class="fas fa-calendar-alt"></i>Reservations</a></li>
+                                <li><a href="./events.html"><i class="fas fa-glass-cheers"></i>Events</a></li>
+                                <li><a href="./contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <!-- <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5>Services</h5>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fas fa-birthday-cake"></i>Private Dining</a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i>Wedding Events</a></li>
+                                <li><a href="#"><i class="fas fa-briefcase"></i>Corporate Events</a></li>
+                                <li><a href="#"><i class="fas fa-truck"></i>Catering</a></li>
+                                <li><a href="#"><i class="fas fa-wine-bottle"></i>Wine Selection</a></li>
+                                <li><a href="#"><i class="fas fa-gift"></i>Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <!-- Contact Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section">
+                            <h5>Contact Info</h5>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>Address</h6>
+                                        <p>123 Gourmet Street<br>Luxury District, City 12345</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>Phone</h6>
+                                        <p>+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h6>Email</h6>
+                                        <p>info@bellavista.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter & Hours -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section">
+                            <h5>Opening Hours</h5>
+                            <div class="hours-table">
+                                <div class="hours-row">
+                                    <span class="hours-day">Monday</span>
+                                    <span class="hours-closed">Closed</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="hours-day">Tue - Thu</span>
+                                    <span class="hours-time">5:00 - 10:00 PM</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="hours-day">Fri - Sat</span>
+                                    <span class="hours-time">5:00 - 11:00 PM</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="hours-day">Sunday</span>
+                                    <span class="hours-time">4:00 - 9:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container-md">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 Bella Vista Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p>Made with <i class="fas fa-heart heart"></i> by <span class="fw-bold">Muhammad Naveed</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to your JavaScript file -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>
